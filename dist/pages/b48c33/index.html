@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git基础第一天 | hyh的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="/myblog/styles/custom.css">
+    <meta name="description" content="YYY">
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.b7a98234.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0fcf8837.js" as="script"><link rel="preload" href="/myblog/assets/js/2.cc627cca.js" as="script"><link rel="preload" href="/myblog/assets/js/37.cdeeff90.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.a2dc7b23.js"><link rel="prefetch" href="/myblog/assets/js/11.0afa5827.js"><link rel="prefetch" href="/myblog/assets/js/12.8be476e9.js"><link rel="prefetch" href="/myblog/assets/js/13.e523a44f.js"><link rel="prefetch" href="/myblog/assets/js/14.5dee2135.js"><link rel="prefetch" href="/myblog/assets/js/15.47f68de1.js"><link rel="prefetch" href="/myblog/assets/js/16.8c977ef7.js"><link rel="prefetch" href="/myblog/assets/js/17.bf8203d7.js"><link rel="prefetch" href="/myblog/assets/js/18.bc3366ea.js"><link rel="prefetch" href="/myblog/assets/js/19.5d857204.js"><link rel="prefetch" href="/myblog/assets/js/20.d83b3d5b.js"><link rel="prefetch" href="/myblog/assets/js/21.78a44a76.js"><link rel="prefetch" href="/myblog/assets/js/22.f8b739bb.js"><link rel="prefetch" href="/myblog/assets/js/23.aa4cd053.js"><link rel="prefetch" href="/myblog/assets/js/24.18f9b031.js"><link rel="prefetch" href="/myblog/assets/js/25.57f248a0.js"><link rel="prefetch" href="/myblog/assets/js/26.4bd5402b.js"><link rel="prefetch" href="/myblog/assets/js/27.7fade500.js"><link rel="prefetch" href="/myblog/assets/js/28.c6197275.js"><link rel="prefetch" href="/myblog/assets/js/29.a04a3c71.js"><link rel="prefetch" href="/myblog/assets/js/3.0f276f16.js"><link rel="prefetch" href="/myblog/assets/js/30.575c01f1.js"><link rel="prefetch" href="/myblog/assets/js/31.6a527127.js"><link rel="prefetch" href="/myblog/assets/js/32.9b7ac100.js"><link rel="prefetch" href="/myblog/assets/js/33.ace11a6f.js"><link rel="prefetch" href="/myblog/assets/js/34.48a5bdf1.js"><link rel="prefetch" href="/myblog/assets/js/35.9cecf4fb.js"><link rel="prefetch" href="/myblog/assets/js/36.b03de8a9.js"><link rel="prefetch" href="/myblog/assets/js/38.ed4074c4.js"><link rel="prefetch" href="/myblog/assets/js/39.c00ced89.js"><link rel="prefetch" href="/myblog/assets/js/4.70bd10a0.js"><link rel="prefetch" href="/myblog/assets/js/40.b1fd67d1.js"><link rel="prefetch" href="/myblog/assets/js/41.f32cceff.js"><link rel="prefetch" href="/myblog/assets/js/42.dc5662bd.js"><link rel="prefetch" href="/myblog/assets/js/43.7a31af98.js"><link rel="prefetch" href="/myblog/assets/js/44.fbd68fc5.js"><link rel="prefetch" href="/myblog/assets/js/45.d1b695b5.js"><link rel="prefetch" href="/myblog/assets/js/46.a3d786d3.js"><link rel="prefetch" href="/myblog/assets/js/47.ad3906a3.js"><link rel="prefetch" href="/myblog/assets/js/48.8f1ec124.js"><link rel="prefetch" href="/myblog/assets/js/49.a8de9077.js"><link rel="prefetch" href="/myblog/assets/js/5.f66a9634.js"><link rel="prefetch" href="/myblog/assets/js/50.e0f66e6d.js"><link rel="prefetch" href="/myblog/assets/js/51.2fb12442.js"><link rel="prefetch" href="/myblog/assets/js/52.38763e07.js"><link rel="prefetch" href="/myblog/assets/js/53.646d03c5.js"><link rel="prefetch" href="/myblog/assets/js/6.7aa27eeb.js"><link rel="prefetch" href="/myblog/assets/js/7.d57cbf75.js"><link rel="prefetch" href="/myblog/assets/js/8.f4918e55.js"><link rel="prefetch" href="/myblog/assets/js/9.e34d9f54.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.b7a98234.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">hyh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myblog/" aria-current="page" class="sidebar-link">博客简介</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ajax基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>git基础篇</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myblog/pages/b48c33/" aria-current="page" class="active sidebar-link">git基础第一天</a></li><li><a href="/myblog/pages/1ab8e3/" class="sidebar-link">git基础第二天</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue2基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue3基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react基础篇</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/myblog/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/myblog/categories/?category=blogs" title="分类" data-v-06225672>blogs</a></li><li data-v-06225672><a href="/myblog/categories/?category=git" title="分类" data-v-06225672>git</a></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-07-07</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">git基础第一天<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h4 id="_1-git"><a href="#_1-git" class="header-anchor">#</a> 1. git</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token constant">VCS</span>  version  control system 版本控制系统
+git 开源的分布式版本控制系统
+
+<span class="token comment">// 作用： 版本控制，存档</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="_2-配置用户名和邮箱"><a href="#_2-配置用户名和邮箱" class="header-anchor">#</a> 2. 配置用户名和邮箱</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">&quot;用户名&quot;</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">&quot;邮箱&quot;</span>
+
+查看配置
+git config <span class="token operator">--</span>list 
+查看全局配置
+git config <span class="token operator">--</span>list <span class="token operator">--</span>global
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_3-初始化仓库"><a href="#_3-初始化仓库" class="header-anchor">#</a> 3. 初始化仓库</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">1.</span> 新建一个空文件夹，  右键 git bash here 
+<span class="token number">2.</span> <span class="token operator">===</span><span class="token operator">&gt;</span>  git init 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_4-查看文件的状态"><a href="#_4-查看文件的状态" class="header-anchor">#</a> 4. 查看文件的状态</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> status  
+<span class="token comment"># 简写 </span>
+<span class="token function">git</span> status <span class="token parameter variable">--short</span> 
+<span class="token function">git</span> status <span class="token parameter variable">-s</span>
+
+红色： 工作区     绿色： 暂存区
+
+?? 文件未跟踪
+A  文件刚纳入跟踪
+M  表示文件已经修改了
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="_5-git-add"><a href="#_5-git-add" class="header-anchor">#</a> 5. git add</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1. 将未纳入跟踪（管理）的文件，纳入管理</span>
+git add 文件名 
+git add <span class="token punctuation">.</span>
+
+<span class="token comment">// 2. 将修改后的文件，（工作区中），添加到暂存区 </span>
+git add <span class="token punctuation">.</span>
+
+<span class="token comment">// ==&gt; git add . </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_6-提交更新-存档-记录一个版本"><a href="#_6-提交更新-存档-记录一个版本" class="header-anchor">#</a> 6. 提交更新（存档，记录一个版本）</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>只要commit之后，这次版本就永久的记录下来了 
+
+git commit <span class="token operator">-</span>m <span class="token string">&quot;本次提交的信息&quot;</span>
+
+<span class="token comment">// 每次提交的时候 </span>
+
+工作区  <span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span>  暂存区  <span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> git仓库
+git add <span class="token punctuation">.</span> 
+git commit <span class="token operator">-</span>m <span class="token string">&quot;update&quot;</span>
+
+<span class="token operator">===</span><span class="token operator">&gt;</span> 跳过暂存区， 前提是文件已经被git纳入跟踪管理
+git commit <span class="token operator">-</span>am <span class="token string">&quot;跳过暂存区&quot;</span> 
+
+
+<span class="token comment">// 修改最近一次提交说明 amend修正</span>
+git commit <span class="token operator">--</span>amend <span class="token operator">-</span>m <span class="token string">&quot;修改最近一次提交信息&quot;</span>
+
+<span class="token comment">// 1. 先修改文件 </span>
+<span class="token comment">// 2. git add .  / git commit -m &quot;提交信息&quot;</span>
+<span class="token comment">// 3. git commit --amend -m &quot;修改提交信息&quot;</span>
+<span class="token comment">// 4. git log --oneline 查看</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h4 id="_7-查看历史提交记录"><a href="#_7-查看历史提交记录" class="header-anchor">#</a> 7. 查看历史提交记录</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>git log  详细信息
+git log <span class="token operator">-</span><span class="token number">2</span> 查看两条
+git log <span class="token operator">--</span>oneline  简洁的查看  <span class="token operator">==</span><span class="token operator">&gt;</span> 推荐
+
+<span class="token comment">// 如果回退到某个版本之后，还想切换另一个版本 查看所有的提交记录</span>
+git reflog 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_8-回退指定版本"><a href="#_8-回退指定版本" class="header-anchor">#</a> 8. 回退指定版本</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">1.</span> 回退
+git reset <span class="token operator">--</span>hard 版本id   
+
+<span class="token number">2.</span> 将暂存区的文件 移动到 工作区
+git reset <span class="token constant">HEAD</span> <span class="token punctuation">.</span>  （所有的文件）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="_9-撤销对文件的修改"><a href="#_9-撤销对文件的修改" class="header-anchor">#</a> 9. 撤销对文件的修改</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 用的很少 </span>
+<span class="token comment">// 就是将工作区的文件，用仓库中当前版本替换掉。</span>
+git checkout 文件名 
+<span class="token comment">// 类似ctrl + Z</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="_10-将纳入git管理的文件移除"><a href="#_10-将纳入git管理的文件移除" class="header-anchor">#</a> 10 将纳入git管理的文件移除</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 将纳入git管理的文件变为未跟踪的状态</span>
+
+git rm <span class="token operator">--</span>cached 文件名  <span class="token comment">// 一个文件</span>
+git rm <span class="token operator">--</span>cached <span class="token operator">-</span>r <span class="token punctuation">.</span>   <span class="token comment">// 所有文件 </span>
+git rm <span class="token operator">-</span>r <span class="token operator">--</span>cached <span class="token punctuation">.</span>  <span class="token comment">// -r的位置可以交换</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="_11-忽略某些文件-不需要被git管理"><a href="#_11-忽略某些文件-不需要被git管理" class="header-anchor">#</a> 11. 忽略某些文件，不需要被git管理</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 创建一个新的文件 sercet.js</span>
+<span class="token number">1.</span> 创建一个<span class="token punctuation">.</span>gitignore 文件
+<span class="token number">2.</span> 将不需要纳入git管理的这个文件，写到里面  # 表示注释
+<span class="token number">3.</span> git add <span class="token punctuation">.</span>
+<span class="token number">4.</span> git commit <span class="token operator">-</span>m <span class="token string">&quot;添加gitignore文件&quot;</span>
+<span class="token number">5.</span> 再修改这个文件， git status查看一下状态
+
+<span class="token operator">--</span><span class="token operator">--</span>
+<span class="token punctuation">.</span>gitignore 只忽略没有跟踪的文件 如果文件已经纳入git管理了，则修改<span class="token punctuation">.</span>gitignore无效 
+
+<span class="token comment">// 解决方案</span>
+<span class="token number">1.</span> 在gitignore文件中写需要忽略的文件信息
+<span class="token number">2.</span> 让所有纳入git管理的文件，都变为未跟踪
+git rm <span class="token operator">-</span>r <span class="token operator">--</span>cached <span class="token punctuation">.</span>
+<span class="token number">3.</span> git add <span class="token punctuation">.</span>  重新添加到暂存区 ，再提交
+<span class="token number">4.</span> 提交当前的更新，备注说明 （添加了gitignore）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h4 id="_12-中文乱码解决"><a href="#_12-中文乱码解决" class="header-anchor">#</a> 12 中文乱码解决</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 解决git status中文显示问题</span>
+git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>quotepath <span class="token boolean">false</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="_13-小结"><a href="#_13-小结" class="header-anchor">#</a> 13 小结‘</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">1.</span> 用户名和邮箱的配置
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">&quot;&quot;</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">&quot;&quot;</span>
+
+<span class="token number">2.</span> 初始化仓库
+git init 
+
+<span class="token number">3.</span> 查看状态
+git status
+
+<span class="token number">4.</span> 将修改的文件放到暂存区 
+git add 文件名 
+git add <span class="token punctuation">.</span>   <span class="token operator">==</span><span class="token operator">&gt;</span> 全部一起提交
+
+<span class="token number">5.</span> 提交更新（存档）
+git commit <span class="token operator">-</span>m <span class="token string">&quot;本次提交的描述信息&quot;</span>
+
+<span class="token number">6.</span> 查看历史记录
+git log <span class="token operator">--</span>oneline 
+git reflog  查看所有的 
+
+<span class="token number">7.</span> 回退版本
+git reset <span class="token operator">--</span>hard id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h4 id="_14-vscode-配置git-bash"><a href="#_14-vscode-配置git-bash" class="header-anchor">#</a> 14 VSCode 配置git bash</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Ctrl + j  </span>
+<span class="token comment">// cmd + j</span>
+
+Ctrl <span class="token operator">+</span> shift <span class="token operator">+</span> p  <span class="token operator">==</span><span class="token operator">&gt;</span> 输入 <span class="token constant">JSON</span> 
+
+<span class="token comment">// where git </span>
+<span class="token comment">// path 修改为Git bash的路径</span>
+
+<span class="token string-property property">&quot;terminal.integrated.profiles.windows&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;PowerShell -NoProfile&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;source&quot;</span><span class="token operator">:</span> <span class="token string">&quot;PowerShell&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;-NoProfile&quot;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;Git-Bash&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;D:\\Program Files\\Git\\bin\\bash.exe&quot;</span><span class="token punctuation">,</span>  
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token string-property property">&quot;terminal.integrated.defaultProfile.windows&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Git-Bash&quot;</span><span class="token punctuation">,</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h4 id="_15-一些常见的命令"><a href="#_15-一些常见的命令" class="header-anchor">#</a> 15  一些常见的命令</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> 文件夹名字  进入某个文件夹
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>  返回上一层       ./ 一个点表示当前目录 <span class="token punctuation">..</span> 上级目录
+
+<span class="token function">clear</span> 清屏 （git-bash）
+cls  清屏  window黑色终端 cmd中 
+
+<span class="token comment"># 查看文件内容</span>
+<span class="token function">cat</span> 文件名
+<span class="token comment"># 创建文件夹</span>
+<span class="token function">mkdir</span> 文件夹名  
+<span class="token comment"># 创建文件</span>
+<span class="token function">touch</span> 文件名 
+
+<span class="token comment"># 查看文件列表</span>
+<span class="token function">ls</span> 
+<span class="token comment"># 显示当前目录</span>
+<span class="token builtin class-name">pwd</span>
+
+
+使用 Vim编辑器 修改内容
+
+
+<span class="token function">vi</span> 文件名  
+<span class="token comment"># 进入vim编辑模式 </span>
+进入这个模式之后， 按键盘 i   <span class="token operator">==</span>》 插入模式 可以输入内容
+
+<span class="token comment"># 退出？</span>
+<span class="token number">1</span>. 按ESC 
+<span class="token number">2</span>. shift+:  <span class="token operator">=</span><span class="token operator">&gt;</span> 冒号（英文）
+
+:q   不保存退出
+:q<span class="token operator">!</span>  不保存强制退出
+:w   保存
+:wq   保存并退出
+:wq<span class="token operator">!</span>  强制保存退出
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/myblog/pages/3ed6d3/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">ajax基础第四天</div></a> <a href="/myblog/pages/1ab8e3/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">git基础第二天</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myblog/pages/3ed6d3/" class="prev">ajax基础第四天</a></span> <span class="next"><a href="/myblog/pages/1ab8e3/">git基础第二天</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myblog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myblog/" class="router-link-active"><div>
+            首页
+            <!----></div></a> <span class="date"></span></dt></dl><dl><dd>02</dd> <dt><a href="/myblog/pages/5afd44/"><div>
+            react基础第三天
+            <!----></div></a> <span class="date">07-07</span></dt></dl><dl><dd>03</dd> <dt><a href="/myblog/pages/f6df06/"><div>
+            react基础第二天
+            <!----></div></a> <span class="date">07-07</span></dt></dl> <dl><dd></dd> <dt><a href="/myblog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/myblog/assets/js/app.0fcf8837.js" defer></script><script src="/myblog/assets/js/2.cc627cca.js" defer></script><script src="/myblog/assets/js/37.cdeeff90.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue2基础第四天 | hyh的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="/myblog/styles/custom.css">
+    <meta name="description" content="YYY">
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.b7a98234.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0fcf8837.js" as="script"><link rel="preload" href="/myblog/assets/js/2.cc627cca.js" as="script"><link rel="preload" href="/myblog/assets/js/44.fbd68fc5.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.a2dc7b23.js"><link rel="prefetch" href="/myblog/assets/js/11.0afa5827.js"><link rel="prefetch" href="/myblog/assets/js/12.8be476e9.js"><link rel="prefetch" href="/myblog/assets/js/13.e523a44f.js"><link rel="prefetch" href="/myblog/assets/js/14.5dee2135.js"><link rel="prefetch" href="/myblog/assets/js/15.47f68de1.js"><link rel="prefetch" href="/myblog/assets/js/16.8c977ef7.js"><link rel="prefetch" href="/myblog/assets/js/17.bf8203d7.js"><link rel="prefetch" href="/myblog/assets/js/18.bc3366ea.js"><link rel="prefetch" href="/myblog/assets/js/19.5d857204.js"><link rel="prefetch" href="/myblog/assets/js/20.d83b3d5b.js"><link rel="prefetch" href="/myblog/assets/js/21.78a44a76.js"><link rel="prefetch" href="/myblog/assets/js/22.f8b739bb.js"><link rel="prefetch" href="/myblog/assets/js/23.aa4cd053.js"><link rel="prefetch" href="/myblog/assets/js/24.18f9b031.js"><link rel="prefetch" href="/myblog/assets/js/25.57f248a0.js"><link rel="prefetch" href="/myblog/assets/js/26.4bd5402b.js"><link rel="prefetch" href="/myblog/assets/js/27.7fade500.js"><link rel="prefetch" href="/myblog/assets/js/28.c6197275.js"><link rel="prefetch" href="/myblog/assets/js/29.a04a3c71.js"><link rel="prefetch" href="/myblog/assets/js/3.0f276f16.js"><link rel="prefetch" href="/myblog/assets/js/30.575c01f1.js"><link rel="prefetch" href="/myblog/assets/js/31.6a527127.js"><link rel="prefetch" href="/myblog/assets/js/32.9b7ac100.js"><link rel="prefetch" href="/myblog/assets/js/33.ace11a6f.js"><link rel="prefetch" href="/myblog/assets/js/34.48a5bdf1.js"><link rel="prefetch" href="/myblog/assets/js/35.9cecf4fb.js"><link rel="prefetch" href="/myblog/assets/js/36.b03de8a9.js"><link rel="prefetch" href="/myblog/assets/js/37.cdeeff90.js"><link rel="prefetch" href="/myblog/assets/js/38.ed4074c4.js"><link rel="prefetch" href="/myblog/assets/js/39.c00ced89.js"><link rel="prefetch" href="/myblog/assets/js/4.70bd10a0.js"><link rel="prefetch" href="/myblog/assets/js/40.b1fd67d1.js"><link rel="prefetch" href="/myblog/assets/js/41.f32cceff.js"><link rel="prefetch" href="/myblog/assets/js/42.dc5662bd.js"><link rel="prefetch" href="/myblog/assets/js/43.7a31af98.js"><link rel="prefetch" href="/myblog/assets/js/45.d1b695b5.js"><link rel="prefetch" href="/myblog/assets/js/46.a3d786d3.js"><link rel="prefetch" href="/myblog/assets/js/47.ad3906a3.js"><link rel="prefetch" href="/myblog/assets/js/48.8f1ec124.js"><link rel="prefetch" href="/myblog/assets/js/49.a8de9077.js"><link rel="prefetch" href="/myblog/assets/js/5.f66a9634.js"><link rel="prefetch" href="/myblog/assets/js/50.e0f66e6d.js"><link rel="prefetch" href="/myblog/assets/js/51.2fb12442.js"><link rel="prefetch" href="/myblog/assets/js/52.38763e07.js"><link rel="prefetch" href="/myblog/assets/js/53.646d03c5.js"><link rel="prefetch" href="/myblog/assets/js/6.7aa27eeb.js"><link rel="prefetch" href="/myblog/assets/js/7.d57cbf75.js"><link rel="prefetch" href="/myblog/assets/js/8.f4918e55.js"><link rel="prefetch" href="/myblog/assets/js/9.e34d9f54.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.b7a98234.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">hyh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myblog/" aria-current="page" class="sidebar-link">博客简介</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ajax基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue2基础篇</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myblog/pages/7de743/" class="sidebar-link">vue2基础第一天</a></li><li><a href="/myblog/pages/98e02d/" class="sidebar-link">vue2基础第二天</a></li><li><a href="/myblog/pages/5e36d4/" class="sidebar-link">vue2基础第三天</a></li><li><a href="/myblog/pages/806ba7/" aria-current="page" class="active sidebar-link">vue2基础第四天</a></li><li><a href="/myblog/pages/511057/" class="sidebar-link">vue2基础第五天</a></li><li><a href="/myblog/pages/61b882/" class="sidebar-link">vue2基础第六天</a></li><li><a href="/myblog/pages/63802d/" class="sidebar-link">vue2基础第七天</a></li><li><a href="/myblog/pages/ce1f2b/" class="sidebar-link">vue2基础第八天</a></li><li><a href="/myblog/pages/65374f/" class="sidebar-link">vuex基础</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue3基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react基础篇</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/myblog/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/myblog/categories/?category=blogs" title="分类" data-v-06225672>blogs</a></li><li data-v-06225672><a href="/myblog/categories/?category=vue2" title="分类" data-v-06225672>vue2</a></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-07-07</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">vue2基础第四天<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h4 id="_1-组件样式设置"><a href="#_1-组件样式设置" class="header-anchor">#</a> 1.组件样式设置</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>问题：我们平时给组件设置样式时，是只是当前组件生效还是所有组件都生效<span class="token operator">?</span>
+    所有组件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>解决办法</strong></p> <div class="language-css line-numbers-mode"><pre class="language-css"><code>&lt;style scoped&gt;   <span class="token comment">/* 给style添加一个scoped属性 */</span>
+<span class="token comment">/* 
+  默认情况下，组件中写的样式，作用于全局
+  我们希望组件里面的样式，只作用于当前这个组件
+
+  推荐大家使用组件的时候，在style上都加上scoped这个属性
+  scoped的原理
+  // 1. 给当前组件内所有标签都加上一个属性 data-v-hash值
+  // 2. 在当前组件内的样式(类名）渲染的时候, 都会加上这个特殊的属性，以属性选择器的形式
+*/</span>
+
+&lt;/style&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="_2-组件中的name属性"><a href="#_2-组件中的name属性" class="header-anchor">#</a> 2.组件中的name属性</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// =&gt; 这里的name决定的是vue调试工具中显示的名字</span>
+  <span class="token comment">// 建议：组件名，还有这里的名字，还有导入的时候，组件对象</span>
+  <span class="token comment">// 都写相同的名字</span>
+  <span class="token comment">// 组件名 DeTest  ==&gt; 注册的时候名字，决定是在template结构中怎么使用'</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'DemoTest'</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_3-单项数据流"><a href="#_3-单项数据流" class="header-anchor">#</a> 3.单项数据流</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>数据从父组件传递到子组件，数据的流动路径 <span class="token parameter">父</span> <span class="token operator">=&gt;</span> 子 
+如果不遵循单项数据流的话：如果我们子组件修改了这个props中的变量值，相当于是子组件修改了父组件中的数据， <span class="token parameter">子</span> <span class="token operator">=&gt;</span> 父 ； 控制台Error
+<span class="token comment">// 因为父组件传递过来的是一个引用类型的数据</span>
+<span class="token comment">// 如果子组件修改了这个引用类型的数据，本质上修改还是父组件中的数据</span>
+<span class="token comment">// 这个时候就会影响到父组件，甚至父组件中使用了这个变量的其他组件也会有影响</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="_4-组件之间的通信"><a href="#_4-组件之间的通信" class="header-anchor">#</a> 4.组件之间的通信</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token operator">/</span><span class="token operator">!</span> 组件通信
+
+<span class="token comment">// 父传子</span>
+<span class="token comment">//  1. 父 =&gt; 子, 添加属性的方式传值</span>
+<span class="token comment">// &lt;child money=&quot;100&quot; desc=&quot;秒速&quot; :color=&quot;skyblue&quot;&gt;&lt;/child&gt;  这个是在父组件使用的注册的子组件</span>
+<span class="token comment">//  2. 子组件内部通过props来接收</span>
+<span class="token comment">// props:['money', 'desc', 'color']</span>
+
+<span class="token comment">// props里面的这些数据，可以和data中的数据类比，使用方式一样</span>
+<span class="token comment">// - template结构中 {{ desc}}</span>
+<span class="token comment">// - methods/computed/watch ==&gt; this.xxx</span>
+
+
+<span class="token comment">// 子传父：</span>
+<span class="token comment">// 1. 在子组件中，this.$emit('自定义事件', 参数1, 参数2, ...)</span>
+<span class="token comment">// 2. 在父组件中 </span>
+<span class="token punctuation">{</span><span class="token comment">/* &lt;child @自定义事件名=&quot;事件处理函数&quot;&gt;&lt;/child&gt; */</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// methods:{</span>
+<span class="token comment">//     处理函数(参数1, 参数2){</span>
+
+<span class="token comment">//     }</span>
+<span class="token comment">// }</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h4 id="_5-props校验"><a href="#_5-props校验" class="header-anchor">#</a> 5.props校验</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token number">1.</span> 基本类型的校验
+    <span class="token comment">// count:String,</span>
+    <span class="token literal-property property">car</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+
+     <span class="token number">2.</span> 多个可能的类型
+    <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">,</span> Number<span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    <span class="token number">3.</span> 必填项
+    <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+      <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+     <span class="token number">4.</span> 默认值，父组件可以传也可以不传的属性
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+      <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">'新年快乐'</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 一个属性只能是必填项或者默认值中的一个，它们是互斥的</span>
+    <span class="token punctuation">,</span>
+    <span class="token literal-property property">list</span><span class="token operator">:</span> Array<span class="token punctuation">,</span>
+    <span class="token comment">// 必填项或者默认值=&gt; 它们是互斥的</span>
+    <span class="token comment">// 带有默认值的对象/数组的时候</span>
+    <span class="token literal-property property">propE</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> Object<span class="token punctuation">,</span>
+      <span class="token comment">// 对象或数组默认值必须从一个工厂函数获取</span>
+      <span class="token comment">// default: function () {</span>
+      <span class="token comment">//     return { msg: 'hello' }</span>
+      <span class="token comment">// }</span>
+      <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">'hello'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 箭头函数，如果返回一个对象，需要小括号括起来</span>
+      <span class="token comment">// default:()=&gt;({msg:'hello'}),</span>
+      <span class="token comment">// default: _ =&gt; ({msg:'hello'})</span>
+
+      <span class="token comment">// 默认返回一个空对象</span>
+      <span class="token comment">// default: _ =&gt; { }</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">propD</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> Array<span class="token punctuation">,</span>
+      <span class="token comment">// 默认空数组</span>
+      <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token parameter">_</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token number">5.</span>自定义验证
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">validator</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 父组件给子组件，给我的颜色必须是 red, yello, green</span>
+        <span class="token comment">// return true // 验证成功</span>
+        <span class="token comment">// return false // 验证不成功，报错</span>
+        <span class="token comment">// if (value === 'red' || value === 'yello'){</span>
+        <span class="token comment">//     return true </span>
+        <span class="token comment">// } else {</span>
+        <span class="token comment">//     return false </span>
+        <span class="token comment">// }</span>
+        <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'yello'</span><span class="token punctuation">,</span> <span class="token string">'pink'</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br></div></div><h4 id="_6-命名格式"><a href="#_6-命名格式" class="header-anchor">#</a> 6.命名格式</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1. 不建议使用小驼峰 </span>
+<span class="token comment">// 2. 不要使用html标签名作为组件名</span>
+<span class="token comment">// ==&gt; 文件那边的名字 两种 </span>
+<span class="token comment">//     1. 大驼峰  TodoHeader </span>
+<span class="token comment">//     2. 中横线小写  todo-header </span>
+<span class="token comment">// 组件注册的时候，推荐 ==&gt; 大驼峰</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_7-双向数据绑定"><a href="#_7-双向数据绑定" class="header-anchor">#</a> 7.双向数据绑定</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1. 数据变化  ==&gt; 视图自动更新</span>
+<span class="token comment">//  item.isDone 变化了 ，视图就更新了</span>
+<span class="token comment">// 2. 视图变化了  ==&gt; 数据更新 s</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="_8-单向数据流"><a href="#_8-单向数据流" class="header-anchor">#</a> 8.单向数据流</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>数据只能从父组件传到子组件，子组件不能直接修改父组件中的数据
+<span class="token comment">// 视图变化时，影响了父组件的数据 ==&gt; 存在问题</span>
+
+<span class="token comment">// ===&gt; 结论： v-model 永远不要和父组件传过来的props的数据发生双向绑定</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="_9-v-model原理"><a href="#_9-v-model原理" class="header-anchor">#</a> 9.v-model原理</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// v-model 是一个语法糖 </span>
+
+<span class="token number">1.</span> 数据变化  <span class="token operator">==</span><span class="token operator">&gt;</span> 视图更新    input框的type如果是checkbox    <span class="token operator">:</span>checked
+<span class="token comment">//    这里的数据变化，app.vue中的data的数据变化  </span>
+ <span class="token number">2.</span> 视图变化  <span class="token operator">==</span><span class="token operator">&gt;</span> 数据更新    让父组件自己去修改数据，通知父组件  @change 事件 
+<span class="token comment">//    视图变化，指的是我们去勾选了复选框，改变了页面的样子</span>
+
+
+<span class="token comment">// v-model 根据 input的不同类型，设置不同的属性，监听不同的事件 </span>
+<span class="token comment">// 1. type=&quot;checkbox&quot;   v-model        :checked + @change </span>
+<span class="token comment">// 2. type=&quot;text&quot;文本框  </span>
+<span class="token comment">//                      v-model        :value + @input </span>
+<span class="token comment">//                      v-model.lazy   :value + @change </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/myblog/pages/5e36d4/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">vue2基础第三天</div></a> <a href="/myblog/pages/511057/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">vue2基础第五天</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myblog/pages/5e36d4/" class="prev">vue2基础第三天</a></span> <span class="next"><a href="/myblog/pages/511057/">vue2基础第五天</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myblog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myblog/" class="router-link-active"><div>
+            首页
+            <!----></div></a> <span class="date"></span></dt></dl><dl><dd>02</dd> <dt><a href="/myblog/pages/5afd44/"><div>
+            react基础第三天
+            <!----></div></a> <span class="date">07-07</span></dt></dl><dl><dd>03</dd> <dt><a href="/myblog/pages/f6df06/"><div>
+            react基础第二天
+            <!----></div></a> <span class="date">07-07</span></dt></dl> <dl><dd></dd> <dt><a href="/myblog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/myblog/assets/js/app.0fcf8837.js" defer></script><script src="/myblog/assets/js/2.cc627cca.js" defer></script><script src="/myblog/assets/js/44.fbd68fc5.js" defer></script>
+  </body>
+</html>

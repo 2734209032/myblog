@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue2基础第七天 | hyh的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="/myblog/styles/custom.css">
+    <meta name="description" content="YYY">
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.b7a98234.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0fcf8837.js" as="script"><link rel="preload" href="/myblog/assets/js/2.cc627cca.js" as="script"><link rel="preload" href="/myblog/assets/js/47.ad3906a3.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.a2dc7b23.js"><link rel="prefetch" href="/myblog/assets/js/11.0afa5827.js"><link rel="prefetch" href="/myblog/assets/js/12.8be476e9.js"><link rel="prefetch" href="/myblog/assets/js/13.e523a44f.js"><link rel="prefetch" href="/myblog/assets/js/14.5dee2135.js"><link rel="prefetch" href="/myblog/assets/js/15.47f68de1.js"><link rel="prefetch" href="/myblog/assets/js/16.8c977ef7.js"><link rel="prefetch" href="/myblog/assets/js/17.bf8203d7.js"><link rel="prefetch" href="/myblog/assets/js/18.bc3366ea.js"><link rel="prefetch" href="/myblog/assets/js/19.5d857204.js"><link rel="prefetch" href="/myblog/assets/js/20.d83b3d5b.js"><link rel="prefetch" href="/myblog/assets/js/21.78a44a76.js"><link rel="prefetch" href="/myblog/assets/js/22.f8b739bb.js"><link rel="prefetch" href="/myblog/assets/js/23.aa4cd053.js"><link rel="prefetch" href="/myblog/assets/js/24.18f9b031.js"><link rel="prefetch" href="/myblog/assets/js/25.57f248a0.js"><link rel="prefetch" href="/myblog/assets/js/26.4bd5402b.js"><link rel="prefetch" href="/myblog/assets/js/27.7fade500.js"><link rel="prefetch" href="/myblog/assets/js/28.c6197275.js"><link rel="prefetch" href="/myblog/assets/js/29.a04a3c71.js"><link rel="prefetch" href="/myblog/assets/js/3.0f276f16.js"><link rel="prefetch" href="/myblog/assets/js/30.575c01f1.js"><link rel="prefetch" href="/myblog/assets/js/31.6a527127.js"><link rel="prefetch" href="/myblog/assets/js/32.9b7ac100.js"><link rel="prefetch" href="/myblog/assets/js/33.ace11a6f.js"><link rel="prefetch" href="/myblog/assets/js/34.48a5bdf1.js"><link rel="prefetch" href="/myblog/assets/js/35.9cecf4fb.js"><link rel="prefetch" href="/myblog/assets/js/36.b03de8a9.js"><link rel="prefetch" href="/myblog/assets/js/37.cdeeff90.js"><link rel="prefetch" href="/myblog/assets/js/38.ed4074c4.js"><link rel="prefetch" href="/myblog/assets/js/39.c00ced89.js"><link rel="prefetch" href="/myblog/assets/js/4.70bd10a0.js"><link rel="prefetch" href="/myblog/assets/js/40.b1fd67d1.js"><link rel="prefetch" href="/myblog/assets/js/41.f32cceff.js"><link rel="prefetch" href="/myblog/assets/js/42.dc5662bd.js"><link rel="prefetch" href="/myblog/assets/js/43.7a31af98.js"><link rel="prefetch" href="/myblog/assets/js/44.fbd68fc5.js"><link rel="prefetch" href="/myblog/assets/js/45.d1b695b5.js"><link rel="prefetch" href="/myblog/assets/js/46.a3d786d3.js"><link rel="prefetch" href="/myblog/assets/js/48.8f1ec124.js"><link rel="prefetch" href="/myblog/assets/js/49.a8de9077.js"><link rel="prefetch" href="/myblog/assets/js/5.f66a9634.js"><link rel="prefetch" href="/myblog/assets/js/50.e0f66e6d.js"><link rel="prefetch" href="/myblog/assets/js/51.2fb12442.js"><link rel="prefetch" href="/myblog/assets/js/52.38763e07.js"><link rel="prefetch" href="/myblog/assets/js/53.646d03c5.js"><link rel="prefetch" href="/myblog/assets/js/6.7aa27eeb.js"><link rel="prefetch" href="/myblog/assets/js/7.d57cbf75.js"><link rel="prefetch" href="/myblog/assets/js/8.f4918e55.js"><link rel="prefetch" href="/myblog/assets/js/9.e34d9f54.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.b7a98234.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">hyh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端三剑客" class="dropdown-title"><!----> <span class="title" style="display:;">前端三剑客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/myblog/blogs/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/myblog/CSS/" class="nav-link">CSS</a></div><div class="nav-item"><a href="/myblog/JavaScript/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myblog/" aria-current="page" class="sidebar-link">博客简介</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ajax基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue2基础篇</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myblog/pages/7de743/" class="sidebar-link">vue2基础第一天</a></li><li><a href="/myblog/pages/98e02d/" class="sidebar-link">vue2基础第二天</a></li><li><a href="/myblog/pages/5e36d4/" class="sidebar-link">vue2基础第三天</a></li><li><a href="/myblog/pages/806ba7/" class="sidebar-link">vue2基础第四天</a></li><li><a href="/myblog/pages/511057/" class="sidebar-link">vue2基础第五天</a></li><li><a href="/myblog/pages/61b882/" class="sidebar-link">vue2基础第六天</a></li><li><a href="/myblog/pages/63802d/" aria-current="page" class="active sidebar-link">vue2基础第七天</a></li><li><a href="/myblog/pages/ce1f2b/" class="sidebar-link">vue2基础第八天</a></li><li><a href="/myblog/pages/65374f/" class="sidebar-link">vuex基础</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue3基础篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react基础篇</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/myblog/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/myblog/categories/?category=blogs" title="分类" data-v-06225672>blogs</a></li><li data-v-06225672><a href="/myblog/categories/?category=vue2" title="分类" data-v-06225672>vue2</a></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-07-07</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">vue2基础第七天<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h4 id="_1-路由传参"><a href="#_1-路由传参" class="header-anchor">#</a> 1.路由传参</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 传参的模式 </span>
+ <span class="token number">1.</span> 查询参数
+  <span class="token operator">&lt;</span>router<span class="token operator">-</span>link to<span class="token operator">=</span><span class="token string">&quot;/article?desc=美食&amp;city=重庆&quot;</span><span class="token operator">&gt;</span>
+<span class="token comment">// 2. 动态路由的方式传参  ==&gt; 需要配置路由规则 </span>
+<span class="token comment">// {path:'/user/:id', component:User}      在配置规则里面</span>
+<span class="token comment">// &lt;router-link to=&quot;/user/007&quot;&gt;            </span>
+
+ <span class="token number">2.</span> 接收
+<span class="token comment">// query参数接收</span>
+<span class="token comment">// this.$route.query.key</span>
+
+<span class="token comment">// 动态路由接收</span>
+<span class="token comment">// this.$route.params.key</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h4 id="_2-编码和解码"><a href="#_2-编码和解码" class="header-anchor">#</a> 2.编码和解码</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// /article?desc=%E7%BE%8E%E9%A3%9F&amp;city=%E9%87%8D%E5%BA%86</span>
+    <span class="token comment">// URL编码</span>
+    <span class="token comment">// 编码：encodeURIComponent()</span>
+    <span class="token comment">// 解码：decodeURIComponent()</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="_3-路由模式"><a href="#_3-路由模式" class="header-anchor">#</a> 3.路由模式</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token operator">/</span> routr<span class="token operator">/</span>index<span class="token punctuation">.</span>js
+<span class="token comment">// router  路由的全局最大的一个实例，唯一的</span>
+<span class="token comment">// routes  路由规则列表 </span>
+<span class="token comment">// route   一条路由规则 </span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 路由模式 两种</span>
+    <span class="token comment">// 1. hash模式 ==&gt; # </span>
+    <span class="token comment">// 2. history模式  ===&gt; /不带#号 </span>
+    <span class="token comment">//  （如果改成了history模式，以后上下后端需要配置一些东西） </span>
+    <span class="token comment">// 后端如果不会，把vue文档丢给他，来，我教你~~~ </span>
+
+    <span class="token literal-property property">mode</span><span class="token operator">:</span><span class="token string">'history'</span><span class="token punctuation">,</span>  <span class="token comment">//设置路由模式 ，默认是hash</span>
+    <span class="token literal-property property">routes</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token comment">// redirect后跟的是一个路径</span>
+        <span class="token comment">// 当一进入页面，匹配到/的时候，重定向到/login</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token literal-property property">redirect</span><span class="token operator">:</span><span class="token string">'/login'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 简写成单个单词，只是方便我们使用，一般情况下多单词</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>Login<span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/article'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>Article<span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/list'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>List<span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/register'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>Register<span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// url地址上输入==&gt;  /user/007</span>
+        <span class="token comment">// 如果要传多个参数，最好建议 先写一个自定义的名字再写动态key</span>
+        <span class="token comment">// /user/:id  :id可以动态的设置 </span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'/user/:id/color/:color'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>User<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+        <span class="token comment">// 路由优先级：路由定义得越早，优先级就越高。</span>
+        <span class="token comment">// 含有通配符的路由应该放在最后</span>
+        <span class="token comment">// 404配置，一般在路由规则的最后一行配置</span>
+        <span class="token punctuation">{</span><span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span>NotFound<span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>  
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h4 id="_4-object-defineproperty"><a href="#_4-object-defineproperty" class="header-anchor">#</a> 4.Object.defineProperty()</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code> Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// 语法：Object.defineProperty(obj, prop/key, descriptor)</span>
+        <span class="token comment">// 作用：给对象定义一个属性或者修改原来的一个属性，并返回这个对象</span>
+       
+        <span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'小米'</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">1999</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 从对象上删除某个属性 ==&gt;  delete obj.price</span>
+        <span class="token comment">// 想给obj这个对象，添加一个属性 color 颜色 ，怎么做呢 ？</span>
+        <span class="token comment">// obj.color = 'red'</span>
+        <span class="token comment">// console.log(obj)</span>
+
+        <span class="token comment">// 可枚举，遍历对象的属性的意思，</span>
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'color'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">value</span><span class="token operator">:</span><span class="token string">'red'</span><span class="token punctuation">,</span>  <span class="token comment">// 设置属性值,</span>
+            <span class="token literal-property property">enumerable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 控制属性是否可以枚举，默认为false</span>
+            <span class="token literal-property property">configurable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 主要控制对象的这个属性是否可以被删除，默认为false</span>
+            <span class="token literal-property property">writable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">// 控制对象的当前这一个属性是否可以被修改（设置、赋值） = ， 默认false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+
+        <span class="token comment">// 遍历一个对象的属性 </span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>el <span class="token keyword">in</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> res <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h4 id="_5-响应式getter和setter函数"><a href="#_5-响应式getter和setter函数" class="header-anchor">#</a> 5.响应式getter和setter函数</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token keyword">let</span> color <span class="token operator">=</span> <span class="token string">'orange'</span>
+        
+        <span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'小米'</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">1999</span>
+        <span class="token punctuation">}</span>
+
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'color'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">enumerable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 控制属性是否可以枚举，默认为false</span>
+            <span class="token literal-property property">configurable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 主要控制对象的这个属性是否可以被删除，默认为false</span>
+
+            <span class="token comment">// 存取描述符 一般叫这两个叫做 getter函数 和 setter函数 </span>
+
+            <span class="token comment">// 当读取obj.color的时候，getter函数就会被调用，返回值就是color属性的值</span>
+            <span class="token function-variable function">get</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token function">reactiveGetter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'getter函数被调用了'</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> color
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// obj.color = 'skyblue'</span>
+            <span class="token comment">// 当属性值被修改的时候，会调用这个函数，它接收一个参数</span>
+            <span class="token function-variable function">set</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token function">reactiveSetter</span><span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setter函数被调用了'</span><span class="token punctuation">)</span>
+                color <span class="token operator">=</span> newVal
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 注意：数据描述符 value 和 writable 不能和 get 或 set函数一起使用</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+        <span class="token comment">// console.log(obj.color)</span>
+
+        <span class="token comment">// 通过get和set函数，让两个独立的obj 和 color变量 产生了一种微妙的联系</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h4 id="_6-数据代理"><a href="#_6-数据代理" class="header-anchor">#</a> 6.数据代理</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>  <span class="token comment">// 数据代理： 通过一个对象代理对另一个对象的中属性的操作（读/写）</span>
+
+        <span class="token comment">// data(){</span>
+        <span class="token comment">//     return {</span>
+        <span class="token comment">//         msg:'hello world '</span>
+        <span class="token comment">//     }</span>
+        <span class="token comment">// }</span>
+        <span class="token comment">// this.msg ===&gt; </span>
+
+        <span class="token comment">// this.msg  ==&gt;  this._data.msg ==&gt; this.$data.msg ==&gt; {</span>
+        <span class="token comment">//         msg:'hello world '</span>
+        <span class="token comment">//     }</span>
+        <span class="token comment">// this这个对象，代理了 data中return出来的对象</span>
+        <span class="token comment">// this._data这个对象，代理了 data中return出来的对象</span>
+
+        <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">}</span>
+
+        <span class="token comment">// obj本身目前没有x属性，没有y属性 ，</span>
+        <span class="token comment">// 想要，访问obj.x  ==&gt; obj2.x </span>
+        <span class="token comment">//      访问obj.y  ==&gt; obj2.y</span>
+
+                <span class="token comment">// obj.x = '某个值'  ==&gt; obj2.x的值</span>
+
+        <span class="token comment">// obj.x ==&gt;  自动调用getter函数</span>
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">configurable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">enumerable</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token comment">//value + writable  ==&gt; 不能 和  get 和set共存 </span>
+            <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> obj2<span class="token punctuation">.</span>x 
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">set</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">// 处理逻辑</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setter函数被调用了'</span><span class="token punctuation">)</span>
+                <span class="token comment">// obj.x = '某个值'</span>
+                obj2<span class="token punctuation">.</span>x <span class="token operator">=</span> newVal
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 我们现在让 obj 这个对象，代理了 obj2的x属性      </span>
+        <span class="token comment">// 让obj这个对象  ==&gt; 代理 obj2这个对象 </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h4 id="_7-vue中的数据代理"><a href="#_7-vue中的数据代理" class="header-anchor">#</a> 7.vue中的数据代理</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">'hello world'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">el</span><span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+      <span class="token comment">// template:'&lt;div&gt;hhh&lt;/div&gt;',</span>
+      <span class="token comment">// data:{}</span>
+      <span class="token comment">// 如果data是一个函数，每次创建一个vue组件的时候</span>
+      <span class="token comment">// data里面的数据，都不会相互有影响~~</span>
+      <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 如果有el，就会自动调用$mount()</span>
+    <span class="token comment">// 如果没有el，有template，需要手动调用$mount</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span>
+
+    <span class="token comment">// vm.msg  ===&gt;  访问的是 data函数return出来的对象中的msg</span>
+    <span class="token comment">// vm.age  ===&gt; {age:18}</span>
+    <span class="token comment">// vm.msg / vm.age  ===&gt; data中的msg和age</span>
+
+    <span class="token comment">// this.msg ===&gt; 代理了 data 中的 msg </span>
+
+    <span class="token comment">// Vue中，生命周期/方法中等待， this指向的就是vm实例 </span>
+
+  <span class="token number">1.</span> Vue中的数据代理
+    <span class="token comment">// 通过vm对象代理了data对象中属性的操作（读/写） </span>
+  <span class="token number">2.</span> Vue中数据代理的好处
+    <span class="token comment">// 更加方便的操作data中的数据 </span>
+    <span class="token comment">// this.msg  =&gt;  vm._data.msg</span>
+
+    <span class="token number">3.</span> 基本原理 
+    <span class="token comment">// 通过Object.defineProperty 把 data中的所有属性 添加到 vm对象上，</span>
+    <span class="token comment">// 为每一个添加的属性，都设置getter和setter方法，在getter和setter方法内部去操作</span>
+    <span class="token comment">// data中对应的属性</span>
+
+    <span class="token comment">// let vm = {}</span>
+
+
+    <span class="token comment">// Vue内部做了这个处理</span>
+    Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> <span class="token string">'msg'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">configurable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">enumerable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">//value + writable  ==&gt; 不能 和  get 和set共存 </span>
+      <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'getter函数被调用了'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span>msg
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">set</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 处理逻辑</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setter函数被调用了'</span><span class="token punctuation">)</span>
+        <span class="token comment">// obj.x = '某个值'</span>
+        data<span class="token punctuation">.</span>msg <span class="token operator">=</span> newVal
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">configurable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">enumerable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">//value + writable  ==&gt; 不能 和  get 和set共存 </span>
+      <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'getter函数被调用了'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span>age
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">set</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 处理逻辑</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setter函数被调用了'</span><span class="token punctuation">)</span>
+        <span class="token comment">// obj.x = '某个值'</span>
+        data<span class="token punctuation">.</span>age <span class="token operator">=</span> newVal
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment">// vm.msg ==&gt; data.msg</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br></div></div><h4 id="_8-vue响应式原理"><a href="#_8-vue响应式原理" class="header-anchor">#</a> 8.vue响应式原理</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 数据劫持  ==&gt; 监听对象的所有属性 劫持了这个对象</span>
+    <span class="token comment">//             我们对这个对象的属性操作的时候，我都能知道~~~</span>
+    <span class="token comment">// obj.msg         ==&gt; getter </span>
+    <span class="token comment">// obj.msg = 'hi'  ==&gt; setter </span>
+
+    <span class="token comment">// 数据劫持+发布订阅</span>
+
+    <span class="token comment">// Vue是一个数据驱动的框架 </span>
+    <span class="token comment">// MVVM </span>
+    <span class="token comment">// M : Model       数据模型 </span>
+    <span class="token comment">// V : View        视图</span>
+    <span class="token comment">// VM: viewModel   视图数据模型 ==&gt; Vue实例vm</span>
+
+    <span class="token comment">// 当数据变化了 ==通过vm做了处理=&gt; 更新视图</span>
+
+    <span class="token comment">// 响应式 ==&gt; 数据变化了，Vue响应式的更新视图 </span>
+
+     <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">return</span> <span class="token punctuation">{</span>
+             <span class="token literal-property property">msg</span><span class="token operator">:</span><span class="token string">'hi'</span>
+        <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+
+    <span class="token comment">// this.msg = 'hello'  ==&gt; 视图更新 </span>
+    <span class="token comment">// 当我们去设置data中的属性值的时候，触发了setter函数 ，</span>
+    <span class="token comment">// setter函数里面就可以去做一些更新视图的操作 </span>
+
+    <span class="token comment">// 定义个函数，update，来表示做视图更新的操作</span>
+     <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span><span class="token string">'hello'</span><span class="token punctuation">,</span>
+         <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+         <span class="token comment">// 如果对象里面嵌套对象，还会继续递归的监听对象的所有属性 </span>
+         <span class="token literal-property property">demo</span><span class="token operator">:</span><span class="token punctuation">{</span>
+             <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">update</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 内部做一些视图更新的逻辑~~~ </span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'视图更新啦~~~'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 我想要 data.msg变化了，就去更新视图 </span>
+    <span class="token comment">// data.msg  ==&gt; </span>
+    <span class="token comment">// 定义一个defineReactive 将data数据做监听，响应式处理 </span>
+    <span class="token comment">// 这个函数的作用就是对某个对象的属性做监听</span>
+    <span class="token keyword">function</span> <span class="token function">defineReactive</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> key<span class="token punctuation">,</span> val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">configurable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">enumerable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">reactiveGetter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 获取了data中的值 </span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'触发了getter函数'</span><span class="token punctuation">)</span>
+          <span class="token keyword">return</span> val
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">reactiveSetter</span><span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'触发了setter函数'</span><span class="token punctuation">)</span>
+          <span class="token comment">// 修改了data中的值 </span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> newVal<span class="token punctuation">)</span> <span class="token keyword">return</span>
+          <span class="token comment">// 更新视图 </span>
+          <span class="token function">update</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token comment">// vm.msg = 'hi' newVal ==&gt; hi</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// initData </span>
+    <span class="token keyword">function</span> <span class="token function">observer</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// {msg:'hell',age:18}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>value <span class="token operator">||</span> <span class="token keyword">typeof</span> value <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token keyword">return</span>
+
+      <span class="token comment">// ['msg', 'age']</span>
+      <span class="token comment">// 实际上会做递归处理，</span>
+      Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// value =&gt; data </span>
+        <span class="token comment">// key   =&gt;  msg </span>
+        <span class="token comment">// value[key]  =&gt; I am hi </span>
+        <span class="token function">defineReactive</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 声明一个Vue类，构造函数 </span>
+    <span class="token keyword">class</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+      <span class="token comment">// new Vue的时候 ，调用 constructor()</span>
+      <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>_data <span class="token operator">=</span> options<span class="token punctuation">.</span>data
+        <span class="token comment">// 对data中所有的属性做监听 </span>
+        <span class="token function">observer</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token string">'I am hi~~'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// vm._data.test = 'hello world '</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br></div></div><h4 id="_9-vue2-对象响应式缺陷"><a href="#_9-vue2-对象响应式缺陷" class="header-anchor">#</a> 9.vue2 对象响应式缺陷</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code>就是我们创建项目的时候，在data函数<span class="token keyword">return</span>的对象，在一开始就被监听了，是响应式的，但我们在后来为这个对象添加属性，就没有被监听到，就是非响应式的
+<span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token literal-property property">el</span><span class="token operator">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
+            <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">obj</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                        <span class="token literal-property property">a</span><span class="token operator">:</span><span class="token number">1</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// Vue.set()</span>
+                <span class="token comment">// this.$set(obj,'c', 999)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        vm<span class="token punctuation">.</span>b <span class="token operator">=</span> <span class="token number">2</span> 
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span>
+
+        <span class="token comment">// Object.defineProperty，或者Vue2的缺陷</span>
+        <span class="token comment">// 1. 针对对象  Vue 无法检测 property 的添加或移除</span>
+
+        <span class="token comment">// 2. 但是可以使用Vue.set或者this.$set给嵌套对象添加响应式属性</span>
+
+        <span class="token comment">// vm.a ==&gt; proxy()</span>
+        <span class="token comment">// Vue.set(vm.data, '')</span>
+        
+        <span class="token comment">// console.log(vm.obj)</span>
+        <span class="token comment">// 全局的Vue.set方法 （哪个对象，哪个属性，值）</span>
+        Vue<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>obj<span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span>
+        <span class="token comment">// 等效于  </span>
+        vm<span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>obj<span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">66</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h4 id="_10-vue2-数组响应式缺陷"><a href="#_10-vue2-数组响应式缺陷" class="header-anchor">#</a> 10.vue2 数组响应式缺陷</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token literal-property property">el</span><span class="token operator">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
+            <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">arr</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">obj</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                        <span class="token literal-property property">obj</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                            <span class="token literal-property property">obj</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                                
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// Vue2对于数组，</span>
+        
+        <span class="token comment">// 1. 下标/索引 设置值的时候 不是响应式的 </span>
+        <span class="token comment">// 2. 修改arr.length 数组的长度的时候 不是响应式的  </span>
+
+
+        <span class="token comment">// 如果非要让他响应式 </span>
+        <span class="token comment">// 1. Vue.set(vm.arr, 下标，新的val) 等效于 vm.$set(vm.arr, 下标，新的val)</span>
+        <span class="token comment">// 2. 利用7个数组方法 实现数组的响应式</span>
+        <span class="token comment">// push() / pop() / shift() / unshift() / splice() / sort() / reverse()</span>
+
+
+        <span class="token comment">// Vue2的缺陷 Object.defineProperty</span>
+        <span class="token comment">// 1. 针对对象 ， 属性的新增和删除 是检测不到的 </span>
+        <span class="token comment">// 2. 针对数组 ， 通过数组下标设置值，或者修改数组的length，不是响应式的      </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/myblog/pages/61b882/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">vue2基础第六天</div></a> <a href="/myblog/pages/ce1f2b/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">vue2基础第八天</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myblog/pages/61b882/" class="prev">vue2基础第六天</a></span> <span class="next"><a href="/myblog/pages/ce1f2b/">vue2基础第八天</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/myblog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/myblog/" class="router-link-active"><div>
+            首页
+            <!----></div></a> <span class="date"></span></dt></dl><dl><dd>02</dd> <dt><a href="/myblog/pages/5afd44/"><div>
+            react基础第三天
+            <!----></div></a> <span class="date">07-07</span></dt></dl><dl><dd>03</dd> <dt><a href="/myblog/pages/f6df06/"><div>
+            react基础第二天
+            <!----></div></a> <span class="date">07-07</span></dt></dl> <dl><dd></dd> <dt><a href="/myblog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/myblog/assets/js/app.0fcf8837.js" defer></script><script src="/myblog/assets/js/2.cc627cca.js" defer></script><script src="/myblog/assets/js/47.ad3906a3.js" defer></script>
+  </body>
+</html>
